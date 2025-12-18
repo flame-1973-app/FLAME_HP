@@ -1,0 +1,240 @@
+/* =========================================
+   スタイルシート (style.css)
+   ========================================= */
+/* ★設定用エリア（ここを変えるだけでOK！）★ */
+:root {
+    /* トップ画像のURLはここで設定します */
+    /* スマホ・PC共通で、自動的にきれいに配置されます */
+    --top-image: url('img/top.jpg');
+}
+
+/* ★基本設定 */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+}
+
+/* ★トップセクション*/
+.top-section {
+    position: relative; /* 画像を重ねるための基準 */
+    height: 20vh;      /* スマホのときは高さ20% */
+    width: 100%;
+    overflow: hidden;  /* はみ出したぼかし部分を隠す */
+    z-index: 0;        /* 文字を一番手前にするために必要 */
+}
+
+/* ①一番後ろ：ぼかした背景（余白埋め用） */
+.top-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    
+    /* 設定した画像を表示 */
+    background-image: var(--top-image);
+    background-size: cover; /* 画面いっぱいに広げる */
+    background-position: center;
+    
+    filter: blur(20px) brightness(0.5); /* ぼかしを入れて暗くする */
+    z-index: -2; /* 一番後ろへ */
+}
+
+/* ②真ん中：メインのきれいな画像 */
+.top-section::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    
+    /* 同じ画像を表示 */
+    background-image: var(--top-image);
+    
+    /* 削らずに全体を表示 */
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    z-index: -1; /* ぼかし背景より手前、文字より後ろ */
+}
+
+/* PC・タブレット（画面幅768px以上）の設定 */
+@media (min-width: 768px) {
+    .top-section {
+        height: 70vh; /* PCのときは高さ70% */
+    }
+}
+
+.top-text {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    /* 文字が見えにくい場合のために影をつける */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+@media (min-width: 768px) {
+    .top-text {
+        font-size: 1.5rem;
+    }
+}
+
+/* ★ナビゲーションバー設定 */
+.bg-light-transparent {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* ナビバー自体の上下余白も消してスリムにする */
+.navbar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* ▼▼▼ メニューの間に「/」を入れる設定（改良版） ▼▼▼ */
+/* パソコン画面（幅992px以上）の時だけ適用 */
+@media (min-width: 992px) {
+    /* 基準点を設定 */
+    .navbar .container-fluid {
+        position: relative;
+        
+        /* ▼▼▼ 高さの調整 ▼▼▼ */
+        /* ここを小さくしても、中身のロゴ(80px)よりは小さくなりません */
+        min-height: 60px; 
+        
+        display: flex;
+        align-items: center; /* 垂直方向中央揃え */
+        
+        /* 限界まで細くするために余白を削除 */
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* ★ロゴを「絶対配置」にして独立させる設定 */
+    .navbar-brand {
+        position: absolute; /* 枠から切り離して浮かせる */
+        left: 20px;            /* 左端に配置 */
+        top: 10px;           /* ← ここを大きくすると、もっと下がります */
+        z-index: 10;        /* メニューより手前に表示 */
+        padding: 0;
+    }
+
+    /* ★【ロゴの大きさ設定】★ */
+    .logo-img {
+        /* ここでロゴの大きさを決めます（バーより大きくてもはみ出して表示されます） */
+        height: 80px; 
+        width: auto;
+        
+    }
+
+    /* ★メニュー（HOME...）を画面の「真ん中」に置く設定 */
+    .navbar-collapse {
+        position: absolute;       /* 自由な位置に置く設定 */
+        left: 50%;                /* 左から50%の位置 */
+        top: 50%;                 /* 上から50%の位置 */
+        transform: translate(-50%, -50%); /* 自身の大きさ分だけ戻して完全に中央へ */
+        width: auto;              /* 幅を自動調整 */
+    }
+
+    .navbar-nav {
+        align-items: center;
+        gap: 0;
+    }
+    
+    .nav-item {
+        display: flex;
+        align-items: center;
+    }
+
+    /* 「/」の設定 */
+    .nav-item + .nav-item::before {
+        content: "/";
+        color: #333;
+        font-weight: bold;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+    .nav-link {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+
+/* ▼▼▼ ロゴデザインの高さ・大きさ設定 ▼▼▼ */
+.logo-img {
+    height: 80px;
+    width: auto;
+    /* 余白を消したので、画像が枠にくっつくのを防ぐ微調整 */
+    padding: 5px 0; 
+}
+/* 文字ロゴの枠デザイン */
+.custom-logo-box {
+    border: 2px solid white; /* 白い枠線 */
+    padding: 5px 10px;       /* 枠線と文字の間の余白 */
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.2;        /* 行の高さ（これを変えると全体の高さが変わります） */
+    
+    /* 文字の大きさを変えたい場合 */
+    font-size: 1.0rem;       
+}
+
+/* スマホ画面の設定 */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: rgba(0,0,0,0.9);
+        padding: 1rem;
+    }
+    .bg-light-transparent {
+        background-color: transparent;
+    }
+    .nav-link {
+        color: white !important;
+        text-align: center;
+    }
+    /* スマホでは「/」を表示しないようにする */
+    .navbar-nav .nav-item + .nav-item::before {
+        content: none;
+    }
+}
+
+/* ★カードセクション */
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+}
+.card-body {
+    background-color: #E0E0E0;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+/* ★フッターアイコン */
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    font-size: 30px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Instagram */
+.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+}
+/* X (Twitter) */
+.x-twitter {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+/* YouTube */
+.youtube {
+    background-color: #FF0000;
+    color: white;
+}
