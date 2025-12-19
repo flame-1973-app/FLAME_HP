@@ -5,13 +5,37 @@
 :root {
     /* トップ画像のURLはここで設定します */
     /* スマホ・PC共通で、自動的にきれいに配置されます */
-    --top-image: url('img/top.jpg');
+    --top-image: url('img/top.png');
 }
 
 /* ★基本設定 */
 body {
     font-family: 'Noto Sans JP', sans-serif;
     color: #333;
+    line-height: 1.6;
+}
+section {
+    padding: 60px 0;
+}
+
+/* セクションのタイトルデザイン */
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #333;
+    margin: 10px auto 0;
 }
 
 /* ★トップセクション*/
@@ -155,27 +179,14 @@ body {
     }
 }
 
-
-/* ▼▼▼ ロゴデザインの高さ・大きさ設定 ▼▼▼ */
-.logo-img {
-    height: 80px;
-    width: auto;
-    /* 余白を消したので、画像が枠にくっつくのを防ぐ微調整 */
-    padding: 5px 0; 
-}
-/* 文字ロゴの枠デザイン */
 .custom-logo-box {
-    border: 2px solid white; /* 白い枠線 */
-    padding: 5px 10px;       /* 枠線と文字の間の余白 */
+    border: 2px solid white;
+    padding: 5px 10px;
     font-weight: bold;
     font-style: italic;
-    line-height: 1.2;        /* 行の高さ（これを変えると全体の高さが変わります） */
-    
-    /* 文字の大きさを変えたい場合 */
-    font-size: 1.0rem;       
+    line-height: 1.2;
+    font-size: 1.0rem;
 }
-
-/* スマホ画面の設定 */
 @media (max-width: 991px) {
     .navbar-collapse {
         background-color: rgba(0,0,0,0.9);
@@ -187,10 +198,14 @@ body {
     .nav-link {
         color: white !important;
         text-align: center;
+        padding: 10px 0;
     }
-    /* スマホでは「/」を表示しないようにする */
-    .navbar-nav .nav-item + .nav-item::before {
+    .nav-item + .nav-item::before {
         content: none;
+    }
+    .logo-img {
+        height: 50px; 
+        width: auto;
     }
 }
 
@@ -198,11 +213,20 @@ body {
 .card {
     border-radius: 8px;
     overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 .card-body {
     background-color: #E0E0E0;
     padding: 2rem 1rem;
     text-align: center;
+}
+a.text-decoration-none {
+    text-decoration: none !important;
+    color: inherit;
 }
 
 /* ★フッターアイコン */
@@ -237,4 +261,125 @@ body {
 .youtube {
     background-color: #FF0000;
     color: white;
+}
+
+/* NEWSリスト */
+.news-list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.news-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+.news-date {
+    font-weight: bold;
+    color: #666;
+    width: 120px;
+    flex-shrink: 0;
+}
+
+/* TEAMS（班） */
+.team-box {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    height: 100%;
+    border: 1px solid #eee;
+}
+.team-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* =========================================
+   ▼▼▼ SCHEDULE（タイムライン）の配色デザイン ▼▼▼
+   ========================================= */
+.timeline {
+    position: relative;
+    padding: 10px 0 10px 20px;
+    list-style: none;
+    border-left: 3px solid #e9ecef;
+    margin-left: 10px;
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* 共通のマーカー設定 */
+.timeline-marker {
+    position: absolute;
+    left: -29px;
+    top: 15px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #e9ecef;
+    background: #999; /* デフォルト色 */
+}
+
+/* 季節ごとの色設定 */
+.timeline-item.spring .timeline-marker { background: #ff75a0; box-shadow: 0 0 0 2px #ffe0e9; }
+.timeline-item.summer .timeline-marker { background: #2196f3; box-shadow: 0 0 0 2px #d4ebff; }
+.timeline-item.autumn .timeline-marker { background: #ff9800; box-shadow: 0 0 0 2px #ffe5b4; }
+.timeline-item.winter .timeline-marker { background: #00bcd4; box-shadow: 0 0 0 2px #d1f7fc; }
+
+.timeline-content {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.2s;
+}
+.timeline-content:hover {
+    transform: translateX(5px);
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.timeline-content::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 18px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #f8f9fa transparent transparent;
+}
+.timeline-content:hover::before {
+    border-color: transparent #fff transparent transparent;
+}
+
+/* 日付バッジのデザイン */
+.timeline-date {
+    display: inline-block;
+    font-weight: bold;
+    color: #fff; /* 文字色を白に */
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    background: #999; /* デフォルト */
+}
+
+/* 季節ごとのバッジ色 */
+.timeline-item.spring .timeline-date { background: #ff75a0; }
+.timeline-item.summer .timeline-date { background: #2196f3; }
+.timeline-item.autumn .timeline-date { background: #ff9800; }
+.timeline-item.winter .timeline-date { background: #00bcd4; }
+
+.timeline-title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
 }

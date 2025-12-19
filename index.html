@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ブラウザのタブに表示される名前です -->
-    <title>FLAME - 東京電機大学工学部二部軽音サークル</title>
+    <title>FLAME - 東京電機大学工学部二部軽音部</title>
     
     <!-- 必要なライブラリの読み込み（ここは触らないでOKです） -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,10 +35,10 @@
             <!-- メニューリンク一覧 -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav bg-light-transparent p-2 rounded">
-                    <li class="nav-item"><a class="nav-link text-dark fw-bold px-3" href="#">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark fw-bold px-3" href="#about">ABOUT</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark fw-bold px-3" href="#">BANDS</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark fw-bold px-3" href="#">CONTACT</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="#">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="#about">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="#activities">ACTIVITIES</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="#contact">CONTACT</a></li>
                 </ul>
             </div>
         </div>
@@ -49,72 +49,31 @@
     <header class="top-section d-flex align-items-end justify-content-center text-center text-white pb-5">
         <div class="container">
             <!-- ここの文字を書き換えてください -->
-            <h1 class="top-text fw-bold">電大二部唯一の軽音サークル！</h1>
+            <h1 class="top-text fw-bold">電大二部唯一の軽音部！</h1>
         </div>
     </header>
 
     <div class="d-flex flex-column">
 
-        <!-- 3つの紹介カードセクション -->
-        <section class="section-cards py-5 bg-white order-1 order-md-2">
-            <div class="container">
-                <div class="row g-4">
-                    
-                    <!-- カード1：ライブレポート -->
-                    <div class="col-12 col-md-4">
-                        <div class="card h-100 border-0 bg-light shadow-sm">
-                            <!-- ▼▼▼ 画像1の変更場所 (srcの中身を変える) ▼▼▼ -->
-                            <img src="img/photo1.jpg" class="card-img-top" alt="Live Report">
-                            <div class="card-body">
-                                <!-- タイトル -->
-                                <h3 class="card-title fw-bold h5">ライブレポート</h3>
-                                <!-- 説明文 -->
-                                <p class="card-text small text-muted mt-3">どのようなライブをしているか紹介！</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- カード2：イベント -->
-                    <div class="col-12 col-md-4">
-                        <div class="card h-100 border-0 bg-light shadow-sm">
-                            <!-- ▼▼▼ 画像2の変更場所 ▼▼▼ -->
-                            <img src="img/photo2.jpg" class="card-img-top" alt="Event">
-                            <div class="card-body">
-                                <h3 class="card-title fw-bold h5">イベント</h3>
-                                <p class="card-text small text-muted mt-3">部員全員で楽しめるイベントがたくさん！</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- カード3：練習 -->
-                    <div class="col-12 col-md-4">
-                        <div class="card h-100 border-0 bg-light shadow-sm">
-                            <!-- ▼▼▼ 画像3の変更場所 ▼▼▼ -->
-                            <img src="img/photo3.jpg" class="card-img-top" alt="Practice">
-                            <div class="card-body">
-                                <h3 class="card-title fw-bold h5">練習</h3>
-                                <p class="card-text small text-muted mt-3">初心者の人でも先輩方が優しく教えてくれます！</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- About（紹介）セクション -->
-        <section id="about" class="section-about py-5 bg-white order-2 order-md-1">
+        <section id="about" class="section-about py-5 bg-white">
             <div class="container">
                 <div class="row align-items-center d-flex flex-column-reverse flex-md-row">
-                    
-                    <!-- 左側の文章エリア -->
                     <div class="col-12 col-md-6 mt-4 mt-md-0">
                         <h2 class="section-title fw-bold mb-4">About</h2>
                         <div class="about-text small lh-lg">
                             <!-- ▼▼▼ 紹介文の変更場所 ▼▼▼ -->
                             <!-- <p>タグで囲まれた部分が1行になります -->
-                            <p>東京電機大学工学部第二部“唯一”の“軽音サークル</p>
+                            <p>東京電機大学工学部第二部“唯一”の“軽音部！</p>
                             <p class="fw-bold my-3">FLAME部です！🎸</p>
                             <p>学内でのライブや年に数回ある学外でのライブを主な活動としています！</p>
+                            教室で行う学内ライブを中心として、野外ライブや他大学との交流ライブなど幅広く活動しています。<br>
+                            大学から始める初心者も多く在籍しており、コピーバンドを中心に先輩に教えてもらいながら楽しく上達できます！<br>
+                            <!-- タグ（バッジ）を追加 -->
+                            <div class="d-flex gap-2 mt-3 flex-wrap">
+                                <span class="badge bg-success rounded-pill p-2">🔰 初心者歓迎</span>
+                                <span class="badge bg-info text-dark rounded-pill p-2">🤝 他キャンパス学生OK</span>
+                            </div>
                         </div>
                     </div>
 
@@ -123,26 +82,394 @@
                         <div class="row g-2">
                             <!-- ▼▼▼ 6枚の小さな画像の変更場所 ▼▼▼ -->
                             <!-- 画像は正方形にトリミングしてね-->
-                            <div class="col-6 col-md-4"><img src="img/photo4.jpg" class="img-fluid w-100" alt=""></div>
-                            <div class="col-6 col-md-4"><img src="img/photo5.jpg" class="img-fluid w-100" alt=""></div>
-                            <div class="col-6 col-md-4"><img src="img/photo6.jpg" class="img-fluid w-100" alt=""></div>
-                            <div class="col-6 col-md-4"><img src="img/photo7.jpg" class="img-fluid w-100" alt=""></div>
-                            <div class="col-6 col-md-4"><img src="https://placehold.co/300x300/666/fff" class="img-fluid w-100" alt=""></div>
-                            <div class="col-6 col-md-4"><img src="https://placehold.co/300x300/777/fff" class="img-fluid w-100" alt=""></div>
+                            <div class="col-6 col-md-4"><img src="img/1.png" class="img-fluid w-100" alt=""></div>
+                            <div class="col-6 col-md-4"><img src="img/2.png" class="img-fluid w-100" alt=""></div>
+                            <div class="col-6 col-md-4"><img src="img/3.png" class="img-fluid w-100" alt=""></div>
+                            <div class="col-6 col-md-4"><img src="img/4.png" class="img-fluid w-100" alt=""></div>
+                            <div class="col-6 col-md-4"><img src="img/5.png" class="img-fluid w-100" alt=""></div>
+                            <div class="col-6 col-md-4"><img src="img/6.png" class="img-fluid w-100" alt=""></div>
                         </div>
                     </div>
 
                 </div>
             </div>
         </section>
-        
+
+        <!-- ▼▼▼ 3つの紹介カードセクション (クリックでポップアップ) ▼▼▼ -->
+        <section id="activities" section-cards py-5 bg-light>
+            <div class="container">
+                <!-- まとめのタイトルを追加しました -->
+                <h2 class="section-title">ACTIVITIES</h2>
+                <div class="row g-4 justify-content-center">
+                    
+                    <!-- カード1：NEWSポップアップを開く -->
+                    <div class="col-12 col-md-4">
+                        <!-- カーソルを指の形にするため role="button" を追加 -->
+                        <div class="card h-100 border-0 shadow-sm" role="button" data-bs-toggle="modal" data-bs-target="#newsModal">
+                            <img src="img/news.png" class="card-img-top" alt="News">
+                            <div class="card-body">
+                                <h3 class="card-title fw-bold h5">NEWS & HISTORY</h3>
+                                <p class="card-text small text-muted mt-3">FLAMEの最新ニュースや、これまでの歩みを紹介します！</p>
+                                <span class="btn btn-sm btn-outline-dark mt-2">詳しく見る &rarr;</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- カード2：TEAMSポップアップを開く -->
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100 border-0 shadow-sm" role="button" data-bs-toggle="modal" data-bs-target="#teamsModal">
+                            <img src="img/teams.png" class="card-img-top" alt="Teams">
+                            <div class="card-body">
+                                <h3 class="card-title fw-bold h5">TEAMS</h3>
+                                <p class="card-text small text-muted mt-3">PA、照明、広報など、演奏以外の役割について紹介します！</p>
+                                <span class="btn btn-sm btn-outline-dark mt-2">詳しく見る &rarr;</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- カード3：SCHEDULEポップアップを開く -->
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100 border-0 shadow-sm" role="button" data-bs-toggle="modal" data-bs-target="#scheduleModal">
+                            <img src="img/schedule.png" class="card-img-top" alt="Schedule">
+                            <div class="card-body">
+                                <h3 class="card-title fw-bold h5">SCHEDULE</h3>
+                                <p class="card-text small text-muted mt-3">学祭、定期ライブなど、1年間の活動予定です！</p>
+                                <span class="btn btn-sm btn-outline-dark mt-2">詳しく見る &rarr;</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
     </div>
 
+     <!-- ① NEWS & HISTORY モーダル -->
+    <div class="modal fade" id="newsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">NEWS & CIRCLE INFO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    
+                    <div class="row g-5">
+                        <!-- 左側：NEWS -->
+                        <div class="col-md-6">
+                            <h4 class="h5 fw-bold mb-3 border-bottom pb-2">NEWS</h4>
+                            <ul class="news-list">
+                                <li class="news-item">
+                                    <span class="news-date">2026.01.31</span>
+                                    <span class="news-title">ホームページをリニューアルしました！</span>
+                                </li>
+                            </ul>
+
+                            <!-- 由来（ここに移動しました） -->
+                            <div class="mt-5">
+                                <h4 class="h5 fw-bold mb-3 border-bottom pb-2">ORIGIN & HISTORY</h4>
+                                <p class="small text-muted">
+                                    ”ＦＬＡＭＥ”の由来は諸説ありますが、顧問の一瀬謙輔教授の専門分野「枠組み(FRAME)」と、炎の「FLAME」をかけて名づけられた説が有力です。<br>
+                                    1973年から続く「フォークソング部」を母体とし、時代を超えてバンド魂を受け継いでいます。
+                                </p>
+                                <ul class="news-list mt-3">
+                                    <li class="news-item">
+                                        <span class="news-date">1973年</span>
+                                        <span class="news-title">母体となるフォークソング部が発足</span>
+                                    </li>
+                                    <li class="news-item">
+                                        <span class="news-date">現在</span>
+                                        <span class="news-title">Rock, Funk, Pops, Metalなどジャンルを問わず活動中</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 右側：サークル詳細データ -->
+                        <div class="col-md-6">
+                            <div class="card border-0 bg-light">
+                                <div class="card-body">
+                                    <h4 class="h5 fw-bold mb-3 border-bottom pb-2">CIRCLE DATA</h4>
+                                    
+                                    <dl class="row mb-0 small">
+                                        <dt class="col-4 mb-3">部員数</dt>
+                                        <dd class="col-8 mb-3 fw-bold">62名</dd>
+
+                                        <dt class="col-4 mb-3">部費</dt>
+                                        <dd class="col-8 mb-3 fw-bold">5,000円</dd>
+
+                                        <dt class="col-4 mb-3">活動場所</dt>
+                                        <dd class="col-8 mb-3">
+                                            <strong>東京千住キャンパス</strong><br>
+                                            部室：3号館3階 30314B<br>
+                                            練習：4号館4階 防音室B<br>
+                                            ライブ：4号館3階 4302教室
+                                        </dd>
+
+                                        <dt class="col-4 mb-3">活動日時</dt>
+                                        <dd class="col-8 mb-3">
+                                            <strong>ミーティング</strong><br>
+                                            金曜日 21:30～ (月1回)<br>
+                                            <br>
+                                            <strong>練習・ライブ</strong><br>
+                                            練習：バンドごとに自由<br>
+                                            ライブ：不定期開催
+                                        </dd>
+                                        
+                                        <dt class="col-12 mt-2 pt-2 border-top">アピールポイント</dt>
+                                        <dd class="col-12 text-muted">
+                                            学内ライブを中心に、野外や他大学との交流ライブも実施！<br>
+                                            初心者も多く、先輩に教わりながら楽しく上達できます。
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ② TEAMS モーダル（内容を充実させました！） -->
+    <div class="modal fade" id="teamsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">TEAMS（班の役割）</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 bg-light">
+                    
+                    <!-- PA班 -->
+                    <div class="bg-white p-4 rounded shadow-sm mb-4">
+                        <h4 class="h5 fw-bold border-bottom pb-2 mb-3 text-primary">
+                            <i class="fa-solid fa-sliders me-2"></i>PA班 (音響)
+                        </h4>
+                        <p class="mb-3"><strong>【PA(音響)とは】</strong><br>
+                        演奏の音（ボーカル・ギターなど）をバランスよくまとめて、観客に聴きやすくして届ける人です。</p>
+                        
+                        <div class="mb-3">
+                            <strong class="d-block mb-2 text-muted small">■ 主な仕事内容</strong>
+                            <ul class="small">
+                                <li>設営（機材の搬入、設置、配線）</li>
+                                <li>リハーサルの進行（各パートの音量・音質チェック）</li>
+                                <li>転換（演者の入れ替えと機材セッティング）</li>
+                                <li>本番中の出音の調整（うるさすぎ・小さすぎを直す）</li>
+                                <li>ハウリング（キーンって音）を防ぐ</li>
+                                <li>撤収（配線を外す、機材の片付け、搬出）</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="alert alert-primary mb-0 small">
+                            <strong>最後に...</strong><br>
+                            PAは一見何をやっているかわかりませんが、ライブにおいてとても重要な役割です！<br>
+                            覚えることは多いですがやりがいのある仕事です！一緒にライブを作り上げましょう！
+                        </div>
+                    </div>
+
+                    <!-- 照明班 -->
+                    <div class="bg-white p-4 rounded shadow-sm mb-4">
+                        <h4 class="h5 fw-bold border-bottom pb-2 mb-3 text-warning">
+                            <i class="fa-solid fa-lightbulb me-2"></i>照明班
+                        </h4>
+                        <div class="mb-3">
+                            <strong class="d-block mb-2 text-muted small">■ 主な仕事内容</strong>
+                            <ol class="small">
+                                <li>照明のセッティング</li>
+                                <li>照明の調節（曲に合わせて色や明るさを変える）</li>
+                                <li>片付け</li>
+                            </ol>
+                        </div>
+                        <div class="alert alert-primary mb-0 small">
+                            <strong>最後に...</strong><br>
+                            照明はただ明るくするだけではありません。曲の展開に合わせて色を変えたり、点滅させたりして、バンドの世界観を視覚的に表現するクリエイティブな仕事です！<br>
+                            光を操って、ステージと客席を一体にする感動を味わってみませんか？
+                        </div>
+                    </div>
+
+                    <!-- 広報班 -->
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <h4 class="h5 fw-bold border-bottom pb-2 mb-3 text-success">
+                            <i class="fa-solid fa-camera me-2"></i>広報班
+                        </h4>
+                        <p class="small mb-3">ライブの撮影を行い、写真や動画を使って各SNSで発信するのが主な仕事です。</p>
+
+                        <!-- 係の紹介 -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-4">
+                                <div class="bg-light p-3 rounded h-100">
+                                    <h6 class="fw-bold small">📸 撮影係</h6>
+                                    <p class="small text-muted mb-0">動画（フロント/ドラム視点）、写真撮影、配信管理など。</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="bg-light p-3 rounded h-100">
+                                    <h6 class="fw-bold small">💻 編集係</h6>
+                                    <p class="small text-muted mb-0">YouTube動画やShorts作成、写真の明るさ補正など。</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="bg-light p-3 rounded h-100">
+                                    <h6 class="fw-bold small">🎨 フライヤー・投稿</h6>
+                                    <p class="small text-muted mb-0">タイムテーブル作成、SNS（X, Insta, YouTube）での宣伝。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 仕事の流れ -->
+                        <div class="mb-3">
+                            <strong class="d-block mb-2 text-muted small">■ ライブ前後の動き</strong>
+                            <div class="d-flex flex-column gap-2 small">
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-secondary me-2">事前</span>
+                                    <span>フライヤー作成、SNS宣伝、シフト表の作成</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-danger me-2">当日</span>
+                                    <span>カメラ準備、シフト通りの撮影・配信、撤収</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-primary me-2">事後</span>
+                                    <span>データUP、選別、アーカイブ設定、編集・投稿</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-success mb-3 small">
+                            <strong>活動のまとめ</strong><br>
+                            ・ライブ映像を残すことで、演者が自分たちの演奏の良かったところ、悪かったところを見返して、次に生かせるようになる。<br>
+                            ・新入生や、入部を迷っている人にどんな部活か知ってもらうため。<br>
+                            ・宣伝によって一人でも多く集客し、会場を盛り上げるのに貢献する。<br>
+                            ・部内で楽しかったことを記録し、いつでも見返せるようにする。「またライブしたいな」と思えるように。<br>
+                            ・ライブにこれなかった人も楽しめるように。<br>
+                            ・大学を卒業したり、軽音をやめた後も見返せるように。
+                        </div>
+                        <div class="alert alert-primary mb-0 small">
+                            <strong>最後に...</strong><br>
+                            当日のライブを盛り上げることから、何年後かに見返すときまで楽しんでもらえるように活動しています。<br>
+                            地味で単純な作業が多いですが、今後いつまでも残り続ける仕事なので、皆で協力して頑張りましょう！
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ③ SCHEDULE モーダル（季節カラー対応） -->
+    <div class="modal fade" id="scheduleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">SCHEDULE（年間予定）</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    
+                    <div class="timeline">
+                        <!-- spring: ピンク -->
+                        <div class="timeline-item spring">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">4月</span>
+                                <h5 class="timeline-title">新入生歓迎ライブ</h5>
+                            </div>
+                        </div>
+                        <div class="timeline-item spring">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">5月</span>
+                                <h5 class="timeline-title">班講習会＆セッション会</h5>
+                            </div>
+                        </div>
+                        <div class="timeline-item spring">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">6月</span>
+                                <h5 class="timeline-title">新入生ライブ</h5>
+                                <h5 class="timeline-title">梅雨フェス</h5>
+                                <h5 class="timeline-title">BBQ</h5>
+                            </div>
+                        </div>
+                        <!-- summer: 青 -->
+                        <div class="timeline-item summer">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">8月</span>
+                                <h5 class="timeline-title">電大ジョイント</h5>
+                                <h5 class="timeline-title">夏ライブ</h5>
+                            </div>
+                        </div>
+                        <div class="timeline-item summer">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">9月</span>
+                                <h5 class="timeline-title">セッション会</h5>
+                            </div>
+                        </div>
+                        <!-- autumn: オレンジ -->
+                        <div class="timeline-item autumn">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">11月</span>
+                                <h5 class="timeline-title">旭祭（学園祭ライブ）</h5>
+                                <p class="text-muted small mb-0 mt-2">1年で一番盛り上がるメインイベントです！</p>
+                            </div>
+                        </div>
+                        <!-- winter: 水色 -->
+                        <div class="timeline-item winter">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">1月</span>
+                                <h5 class="timeline-title">冬フェス</h5>
+                            </div>
+                        </div>
+                        <div class="timeline-item winter">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2月</span>
+                                <h5 class="timeline-title">３大合同ライブ</h5>
+                            </div>
+                        </div>
+                        <div class="timeline-item winter">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">3月</span>
+                                <h5 class="timeline-title">追い出しライブ</h5>
+                                <p class="text-muted small mb-0 mt-2">卒業する先輩を送り出す最後のライブです。</p>
+                                <h5 class="timeline-title mt-3">年度収めフェス</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-3 bg-light rounded border text-center">
+                        <p class="mb-0 fw-bold text-dark">
+                            <i class="fa-solid fa-microphone-lines me-2 text-primary"></i>
+                            他にも、他大学との交流ライブや<br class="d-sm-none">OBライブに出ることもあるよ！
+                        </p>
+                    </div>
+                    <p class="text-center text-muted small mt-4">※予定は変更になる可能性があります。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
     <!-- フッター -->
-    <footer class="bg-dark text-white py-5 text-center">
+    <footer id="contact" class="bg-dark text-white py-5 text-center">
         <div class="container">
-            <h4 class="h6 mb-4">東京電機大学工学部二部軽音サークル　“FLAME部”</h4>
-            
+            <!-- ▼▼▼ CONTACT情報を追加 ▼▼▼ -->
+            <h2 class="h4 fw-bold mb-4">CONTACT</h2>
+            <p class="mb-4 text-white-50">練習の見学や入部希望、ご質問は<br>各SNSのDM（ダイレクトメッセージ）からお気軽にどうぞ！</p>
             <!-- SNSアイコンエリア -->
             <div class="social-icons d-flex justify-content-center gap-4 mb-4">
                 <!-- ▼▼▼ リンク先変更場所 ▼▼▼ -->
@@ -154,6 +481,9 @@
                 <a href="https://m.youtube.com/channel/UCYbpt8amXIBfavkvjfcsvCw?fbclid=PAQ0xDSwOwa7tleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAadHrbGjSqOQoz78jB9JytbsssEiI0fFOhuBaYfeuq0Ym7ZirMk1FN6uLr3HCg_aem_noNwHkU1rlI_swvxa_w6AA" 
                 class="social-btn youtube"><i class="fab fa-youtube"></i></a>
             </div>
+            <!-- 部活名とコピーライト -->
+            <h4 class="h6 mb-0 mt-5">東京電機大学工学部二部軽音部　“FLAME部”</h4>
+            <p class="small text-white-50 mt-2">&copy; FLAME - DENDAI 2BU Music Circle.</p>
         </div>
     </footer>
 
